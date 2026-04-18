@@ -1,0 +1,129 @@
+@use "../base/variables" as *;
+
+.products {
+  &-container {
+    padding-block: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    letter-spacing: -0.03em;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+    padding: 4px;
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: $color-white;
+    box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.2);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__image {
+    border-radius: 8px;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background-color: $color-white;
+  }
+
+  &__favorite-icon {
+    fill: transparent;
+    stroke: $color-black;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__description {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: $color-gray-500;
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &__price-current {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__price-old {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-decoration: line-through;
+    text-align: center;
+    color: $color-gray-500;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-brand-600;
+    margin-top: 18px;
+  }
+}

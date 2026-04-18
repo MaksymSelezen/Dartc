@@ -10,9 +10,6 @@
     margin-right: -16px;
   }
 
-  &__wrapper {
-  }
-
   &__slide {
     max-width: 296px;
   }
@@ -81,8 +78,5 @@
     font-size: 14px;
     line-height: 150%;
     color: $color-gray-500;
-  }
-
-  &__breadcrumbs-current {
   }
 }

@@ -14,5 +14,14 @@
         <symbol id="icon-burger" viewBox="0 0 64 32">
             <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M2.667 2.667h56.889M2.667 27.556h56.889"></path>
         </symbol>
+        <symbol id="icon-star" viewBox="0 0 33 32">
+            <path d="M16.667 25.649l-10.301 6.351 2.801-11.852-9.166-7.925 12.031-0.973 4.635-11.25 4.635 11.25 12.031 0.973-9.166 7.925 2.801 11.852-10.301-6.351z"></path>
+        </symbol>
+        <symbol id="icon-favorite" viewBox="0 0 37 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9474" d="M15.639 29.209c-4.752-3.553-14.165-11.676-14.165-18.987 0-4.832 3.546-8.749 8.421-8.749 2.526 0 5.053 0.842 8.421 4.211 3.368-3.368 5.895-4.211 8.421-4.211 4.875 0 8.421 3.917 8.421 8.749 0 7.31-9.414 15.433-14.165 18.987-1.599 1.196-3.754 1.196-5.353 0z"></path>
+        </symbol>
+        <symbol id="icon-arrow-down" viewBox="0 0 56 32">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="7" d="M51.5 3.5c0 0-17.676 24-24 24s-24-24-24-24"></path>
+        </symbol>
     </defs>
 </svg>
