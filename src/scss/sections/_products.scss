@@ -111,19 +111,7 @@
   }
 
   &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
-    width: 100%;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    color: $color-white;
-    background-color: $color-brand-600;
     margin-top: 18px;
   }
 }

@@ -43,7 +43,7 @@
                   />
                   <div class="hero__content">
                     <h2 class="hero__title">New Arrivals</h2>
-                    <button class="hero__button" type="button">
+                    <button class="hero__button ui-button" type="button">
                       View Product
                     </button>
                   </div>
@@ -59,7 +59,7 @@
                   />
                   <div class="hero__content">
                     <h2 class="hero__title">Spring Sale Up to 50% Off</h2>
-                    <button class="hero__button" type="button">
+                    <button class="hero__button ui-button" type="button">
                       View Product
                     </button>
                   </div>
@@ -174,7 +174,12 @@
                     <span class="products__price-old">$1,199</span>
                   </div>
 
-                  <button class="products__button" type="button">Add</button>
+                  <button
+                    class="products__button ui-button ui-button_full"
+                    type="button"
+                  >
+                    Add
+                  </button>
                 </div>
               </article>
             </li>
@@ -207,7 +212,12 @@
                     <span class="products__price-old">$699</span>
                   </div>
 
-                  <button class="products__button" type="button">Add</button>
+                  <button
+                    class="products__button ui-button ui-button_full"
+                    type="button"
+                  >
+                    Add
+                  </button>
                 </div>
               </article>
             </li>
@@ -257,7 +267,7 @@
               </div>
 
               <button
-                class="featured-product__button ui-button ui-button--full"
+                class="featured-product__button ui-button ui-button_full"
                 type="button"
               >
                 View Product
@@ -336,7 +346,7 @@
               </div>
 
               <button
-                class="contact__button ui-button ui-button--full"
+                class="contact__button ui-button ui-button_full"
                 type="submit"
               >
                 Send Message
@@ -346,6 +356,48 @@
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link footer__link_active" href="/">
+                <svg class="footer__icon" width="20" height="21">
+                  <use href="/src/assets/icons/sprite.svg#icon-home"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="/">
+                <svg class="footer__icon" width="20" height="21">
+                  <use href="/src/assets/icons/sprite.svg#icon-catalog"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="/">
+                <svg class="footer__icon" width="20" height="21">
+                  <use href="/src/assets/icons/sprite.svg#icon-favorite"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__item">
+              <a class="footer__link" href="/">
+                <svg class="footer__icon" width="20" height="21">
+                  <use href="/src/assets/icons/sprite.svg#icon-shopping"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
