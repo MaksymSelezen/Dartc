@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore</title>
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="container header-container">
+        <div class="header__inner">
+          <a class="header__logo" href="/">
+            <svg class="header__logo-icon" width="95" height="15">
+              <use href="/src/assets/icons/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+
+          <button class="header__burger" type="button" aria-label="Open menu">
+            <svg class="header__burger-icon" width="18" height="9">
+              <use href="/src/assets/icons/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+
+      <section class="hero">
+        <div class="container hero-container">
+          <div class="hero__slider swiper">
+            <div class="hero__wrapper swiper-wrapper">
+              <article class="hero__slide swiper-slide">
+                <div class="hero__card">
+                  <img
+                    class="hero__image"
+                    src="/src/assets/images/hero/hero-photo1-390.png"
+                    alt="New Arrivals banner"
+                  />
+                  <div class="hero__content">
+                    <h2 class="hero__title">New Arrivals</h2>
+                    <button class="hero__button" type="button">
+                      View Product
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="hero__slide swiper-slide">
+                <div class="hero__card">
+                  <img
+                    class="hero__image"
+                    src="/src/assets/images/hero/hero-photo2-390.png"
+                    alt="Spring Sale Up to 50% Off banner"
+                  />
+                  <div class="hero__content">
+                    <h2 class="hero__title">Spring Sale Up to 50% Off</h2>
+                    <button class="hero__button" type="button">
+                      View Product
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="hero__breadcrumbs" aria-label="Breadcrumb">
+            <ul class="hero__breadcrumbs-list">
+              <li class="hero__breadcrumbs-item">
+                <a class="hero__breadcrumbs-link" href="/">Home</a>
+              </li>
+              <li class="hero__breadcrumbs-item">
+                <a class="hero__breadcrumbs-link" href="/">Electronics</a>
+              </li>
+              <li class="hero__breadcrumbs-item">
+                <a class="hero__breadcrumbs-link" href="/">Smartphones</a>
+              </li>
+              <li class="hero__breadcrumbs-item">
+                <a class="hero__breadcrumbs-link" href="/">Android</a>
+              </li>
+              <li class="hero__breadcrumbs-item">
+                <a class="hero__breadcrumbs-link" href="/">Prem</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

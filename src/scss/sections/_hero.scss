@@ -1,0 +1,88 @@
+@use "../base/variables" as *;
+
+.hero {
+  &-container {
+    padding-block: 12px;
+  }
+
+  &__slider {
+    width: calc(100% + 16px);
+    margin-right: -16px;
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    max-width: 296px;
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    left: 16px;
+    bottom: 17px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: $color-white;
+  }
+
+  &__button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: $color-brand-600;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__breadcrumbs {
+    margin-top: 12px;
+  }
+
+  &__breadcrumbs-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  &__breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    &:not(:last-child)::after {
+      content: "/";
+      margin-inline: 8px;
+      color: $color-gray-500;
+    }
+  }
+
+  &__breadcrumbs-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-gray-500;
+  }
+
+  &__breadcrumbs-current {
+  }
+}
