@@ -1,10 +1,30 @@
 import JustValidate from "just-validate";
 
-const CONTACT_HINT_TEXT = "This is a hint text to help user.";
 const FIELD_IDS = {
   name: "#contact-name",
   email: "#contact-email",
   message: "#contact-message",
+};
+
+const FIELD_HINTS = {
+  name: {
+    default: "Enter your full name.",
+    invalid: "Please enter a valid name (at least 2 characters).",
+    valid: "Name looks good.",
+  },
+  email: {
+    default: "Enter your email address.",
+    invalid: "Please enter a valid email address.",
+    valid: "Email address looks good.",
+  },
+  message: {
+    default:
+      "Please fill in all fields marked with an asterisk (*)! Please note our Privacy policy.",
+    invalid:
+      "Please fill in all fields marked with an asterisk (*)! Please note our Privacy policy.",
+    valid:
+      "Please fill in all fields marked with an asterisk (*)! Please note our Privacy policy.",
+  },
 };
 
 const setFieldState = (field, state) => {
@@ -23,7 +43,10 @@ const setFieldState = (field, state) => {
   }
 };
 
-const setHint = (field, text = CONTACT_HINT_TEXT) => {
+const getFieldHint = (fieldName, state) =>
+  FIELD_HINTS[fieldName]?.[state] ?? "";
+
+const setHint = (field, text) => {
   const hint = field?.querySelector(".contact__hint");
 
   if (hint) {
@@ -44,15 +67,28 @@ const validateContactForm = () => {
     message: form.querySelector(FIELD_IDS.message)?.closest(".contact__field"),
   };
 
-  const updateFieldUi = (fieldName, isValid, text = CONTACT_HINT_TEXT) => {
+  const updateFieldUi = (fieldName, isValid) => {
     const field = fields[fieldName];
 
     if (!field) {
       return;
     }
 
-    setFieldState(field, isValid ? "valid" : "invalid");
-    setHint(field, text);
+    const state = isValid ? "valid" : "invalid";
+
+    setFieldState(field, state);
+    setHint(field, getFieldHint(fieldName, state));
+  };
+
+  const setFieldDefaultUi = (fieldName) => {
+    const field = fields[fieldName];
+
+    if (!field) {
+      return;
+    }
+
+    setFieldState(field, "default");
+    setHint(field, getFieldHint(fieldName, "default"));
   };
 
   const validator = new JustValidate(form, {
@@ -65,24 +101,25 @@ const validateContactForm = () => {
 
   validator
     .addField(FIELD_IDS.name, [
-      { rule: "required", errorMessage: CONTACT_HINT_TEXT },
-      { rule: "minLength", value: 2, errorMessage: CONTACT_HINT_TEXT },
+      { rule: "required", errorMessage: FIELD_HINTS.name.invalid },
+      { rule: "minLength", value: 2, errorMessage: FIELD_HINTS.name.invalid },
     ])
     .addField(FIELD_IDS.email, [
-      { rule: "required", errorMessage: CONTACT_HINT_TEXT },
-      { rule: "email", errorMessage: CONTACT_HINT_TEXT },
+      { rule: "required", errorMessage: FIELD_HINTS.email.invalid },
+      { rule: "email", errorMessage: FIELD_HINTS.email.invalid },
     ])
     .addField(FIELD_IDS.message, [
-      { rule: "required", errorMessage: CONTACT_HINT_TEXT },
-      { rule: "minLength", value: 10, errorMessage: CONTACT_HINT_TEXT },
+      { rule: "required", errorMessage: FIELD_HINTS.message.invalid },
+      {
+        rule: "minLength",
+        value: 10,
+        errorMessage: FIELD_HINTS.message.invalid,
+      },
     ])
     .onSuccess((event) => {
       event.target.reset();
 
-      Object.values(fields).forEach((field) => {
-        setFieldState(field, "default");
-        setHint(field);
-      });
+      Object.keys(fields).forEach(setFieldDefaultUi);
     });
 
   Object.entries(FIELD_IDS).forEach(([fieldName, selector]) => {
