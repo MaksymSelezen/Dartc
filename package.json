@@ -13,6 +13,7 @@
     "vite": "^8.0.4"
   },
   "dependencies": {
+    "accordion-js": "^3.4.1",
     "modern-normalize": "^3.0.1",
     "swiper": "^12.1.3"
   }

@@ -18,7 +18,13 @@
             </svg>
           </a>
 
-          <button class="header__burger" type="button" aria-label="Open menu">
+          <button
+            class="header__burger js-open-burger-menu"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="burger-menu"
+          >
             <svg class="header__burger-icon" width="18" height="9">
               <use href="/src/assets/icons/sprite.svg#icon-burger"></use>
             </svg>
@@ -26,6 +32,155 @@
         </div>
       </div>
     </header>
+
+    <!-- BURGER-MENU -->
+
+    <div
+      class="burger-menu js-burger-menu"
+      id="burger-menu"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="container burger-menu-container">
+        <div class="burger-menu__inner">
+          <div class="burger-menu__header">
+            <a class="burger-menu__logo" href="/">
+              <svg class="burger-menu__logo-icon" width="95" height="15">
+                <use href="/src/assets/icons/sprite.svg#icon-logo"></use>
+              </svg>
+            </a>
+
+            <button
+              class="burger-menu__close js-close-burger-menu"
+              type="button"
+              aria-label="Close menu"
+            >
+              <svg class="burger-menu__close-icon" width="16" height="16">
+                <use href="/src/assets/icons/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+
+          <nav class="burger-menu__nav" aria-label="Mobile menu">
+            <a class="burger-menu__link" href="/">Home</a>
+
+            <div class="burger-menu__accordion js-burger-accordion">
+              <div class="burger-menu__accordion-item">
+                <h2 class="burger-menu__accordion-header">
+                  <button class="burger-menu__button" type="button">
+                    <span class="burger-menu__button-text">Shop</span>
+
+                    <svg class="burger-menu__button-icon" width="14" height="8">
+                      <use
+                        href="/src/assets/icons/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </h2>
+
+                <div class="burger-menu__panel">
+                  <ul class="burger-menu__sublist">
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Phones</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Laptops</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="burger-menu__accordion-item">
+                <h2 class="burger-menu__accordion-header">
+                  <button class="burger-menu__button" type="button">
+                    <span class="burger-menu__button-text">Collections</span>
+
+                    <svg class="burger-menu__button-icon" width="14" height="8">
+                      <use
+                        href="/src/assets/icons/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </h2>
+
+                <div class="burger-menu__panel">
+                  <ul class="burger-menu__sublist">
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">New Arrivals</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Best Sellers</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="burger-menu__accordion-item">
+                <h2 class="burger-menu__accordion-header">
+                  <button class="burger-menu__button" type="button">
+                    <span class="burger-menu__button-text">Company</span>
+
+                    <svg class="burger-menu__button-icon" width="14" height="8">
+                      <use
+                        href="/src/assets/icons/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </h2>
+
+                <div class="burger-menu__panel">
+                  <ul class="burger-menu__sublist">
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">About</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">FAQ</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Reviews</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Photos</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Gift Boxes</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="burger-menu__accordion-item">
+                <h2 class="burger-menu__accordion-header">
+                  <button class="burger-menu__button" type="button">
+                    <span class="burger-menu__button-text">Support</span>
+
+                    <svg class="burger-menu__button-icon" width="14" height="8">
+                      <use
+                        href="/src/assets/icons/sprite.svg#icon-arrow-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </h2>
+
+                <div class="burger-menu__panel">
+                  <ul class="burger-menu__sublist">
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Help Center</a>
+                    </li>
+                    <li class="burger-menu__subitem">
+                      <a class="burger-menu__sublink" href="/">Shipping</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
 
     <main>
       <!-- HERO -->
