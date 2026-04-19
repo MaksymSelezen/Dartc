@@ -88,6 +88,23 @@ const validateContactForm = () => {
     }
 
     setFieldState(field, "default");
+    setHint(field, "");
+  };
+
+  const showFieldDefaultHint = (fieldName) => {
+    const field = fields[fieldName];
+
+    if (!field) {
+      return;
+    }
+
+    if (
+      field.classList.contains("is-invalid") ||
+      field.classList.contains("is-valid")
+    ) {
+      return;
+    }
+
     setHint(field, getFieldHint(fieldName, "default"));
   };
 
@@ -129,6 +146,10 @@ const validateContactForm = () => {
       return;
     }
 
+    input.addEventListener("focus", () => {
+      showFieldDefaultHint(fieldName);
+    });
+
     input.addEventListener("blur", async () => {
       const isValid = await validator.revalidateField(selector);
       updateFieldUi(fieldName, isValid);
@@ -157,6 +178,8 @@ const validateContactForm = () => {
       updateFieldUi(key, value.isValid);
     });
   });
+
+  Object.keys(fields).forEach(setFieldDefaultUi);
 };
 
 validateContactForm();

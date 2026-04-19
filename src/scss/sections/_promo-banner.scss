@@ -44,7 +44,7 @@
   &__stars {
     display: flex;
     gap: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 
     @media screen and (min-width: $bp-768) {
       margin-bottom: 18px;
@@ -96,7 +96,7 @@
     font-size: 16px;
     line-height: 150%;
     color: rgba(66, 48, 125, 0.6);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 
     &_br {
       @media screen and (min-width: $bp-768) {
@@ -127,7 +127,6 @@
     justify-content: center;
     width: 100%;
     min-height: 48px;
-    padding: 8px 24px;
     white-space: nowrap;
 
     @media screen and (min-width: $bp-768) {
