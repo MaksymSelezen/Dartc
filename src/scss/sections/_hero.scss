@@ -3,33 +3,109 @@
 .hero {
   &-container {
     padding-block: 12px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 20px 24px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 24px 28px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 32px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      padding-block: 40px;
+    }
   }
 
   &__slider {
     width: calc(100% + 16px);
-    margin-right: -16px;
+    overflow: visible;
+
+    @media screen and (min-width: $bp-768) {
+      width: 100%;
+    }
   }
 
   &__slide {
-    max-width: 296px;
+    width: 100%;
+    flex-shrink: 0;
   }
 
   &__card {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
     width: 100%;
+    height: 200px;
+    border-radius: 12px;
+
+    @media screen and (min-width: $bp-768) {
+      height: 280px;
+      border-radius: 16px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      height: 340px;
+      border-radius: 18px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      height: 420px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      height: 520px;
+      border-radius: 24px;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
   }
 
   &__content {
     position: absolute;
     left: 16px;
+    right: 16px;
     bottom: 17px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+
+    @media screen and (min-width: $bp-768) {
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      gap: 20px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      left: 32px;
+      right: 32px;
+      bottom: 32px;
+      gap: 24px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      left: 40px;
+      right: 40px;
+      bottom: 40px;
+      gap: 28px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      left: 48px;
+      right: 48px;
+      bottom: 48px;
+      gap: 32px;
+    }
   }
 
   &__title {
@@ -37,16 +113,55 @@
     font-size: 20px;
     line-height: 130%;
     color: $color-white;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      font-size: 36px;
+    }
   }
 
   &__breadcrumbs {
     margin-top: 12px;
+
+    @media screen and (min-width: $bp-768) {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      margin-top: 24px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      margin-top: 28px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      margin-top: 32px;
+    }
   }
 
   &__breadcrumbs-list {
     display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    row-gap: 8px;
+
+    @media screen and (min-width: $bp-768) {
+      flex-wrap: wrap;
+      overflow-x: visible;
+    }
   }
 
   &__breadcrumbs-item {
@@ -57,14 +172,69 @@
     &:not(:last-child)::after {
       content: "/";
       margin-inline: 8px;
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
       color: $color-gray-500;
+
+      @media screen and (min-width: $bp-768) {
+        margin-inline: 10px;
+        font-size: 16px;
+      }
+
+      @media screen and (min-width: $bp-1440) {
+        margin-inline: 12px;
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: $bp-1920) {
+        font-size: 20px;
+      }
     }
   }
 
   &__breadcrumbs-link {
+    display: inline-block;
+    white-space: nowrap;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: $color-gray-500;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      font-size: 20px;
+    }
+  }
+
+  &__breadcrumbs-current {
+    display: inline-block;
+    white-space: nowrap;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $color-gray-500;
+
+    @media screen and (min-width: $bp-768) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      font-size: 20px;
+    }
   }
 }

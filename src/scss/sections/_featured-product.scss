@@ -5,6 +5,22 @@
 
   &-container {
     padding-block: 24px;
+
+    @media screen and (min-width: 768px) {
+      padding-block: 32px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding-block: 40px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding-block: 56px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      padding-block: 64px;
+    }
   }
 
   &__card {
@@ -14,15 +30,61 @@
     border-radius: 16px;
     background-color: $color-white;
     box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.2);
+
+    @media screen and (min-width: 768px) {
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 760px;
+      margin-inline: auto;
+      padding: 24px;
+      border-radius: 24px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 860px;
+      padding: 32px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      max-width: 960px;
+      padding: 40px;
+    }
   }
 
   &__media {
     position: relative;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 28px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      margin-bottom: 36px;
+    }
   }
 
   &__image {
     border-radius: 12px;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 16px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-radius: 20px;
+    }
   }
 
   &__favorite {
@@ -36,51 +98,148 @@
     height: 48px;
     border-radius: 9999px;
     background-color: $color-white;
+
+    @media screen and (min-width: 768px) {
+      top: 12px;
+      right: 12px;
+      width: 52px;
+      height: 52px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 56px;
+      height: 56px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &__favorite-icon {
     fill: transparent;
     stroke: $color-black;
+
+    @media screen and (min-width: 1440px) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     padding-inline: 4px;
+
+    @media screen and (min-width: 1024px) {
+      align-items: center;
+      padding-inline: 0;
+      text-align: center;
+    }
   }
 
   &__badge {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 150%;
-    text-transform: uppercase;
-    color: $color-brand-600;
-    background-color: $color-brand-100;
-    letter-spacing: -0.03em;
-
     display: inline-flex;
     align-items: center;
     align-self: flex-start;
     justify-content: center;
+    margin-bottom: 8px;
     padding: 5px 12px;
     border-radius: 9999px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: $color-brand-600;
+    background-color: $color-brand-100;
 
-    margin-bottom: 8px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      align-self: center;
+      margin-bottom: 12px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 14px;
+      padding: 9px 18px;
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      font-size: 16px;
+    }
   }
 
   &__title {
+    margin-bottom: 8px;
     font-weight: 700;
     font-size: 24px;
     line-height: 133%;
-    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+    color: $color-black;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 640px;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 720px;
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      max-width: 780px;
+      font-size: 44px;
+    }
   }
 
   &__description {
+    margin-bottom: 12px;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: $color-gray-500;
-    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      font-size: 24px;
+    }
   }
 
   &__prices {
@@ -88,12 +247,45 @@
     align-items: baseline;
     gap: 8px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      gap: 14px;
+      margin-bottom: 32px;
+    }
   }
 
   &__price-current {
     font-weight: 700;
     font-size: 24px;
     line-height: 133%;
+    color: $color-black;
+
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 34px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 40px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      font-size: 44px;
+    }
   }
 
   &__price-old {
@@ -102,5 +294,39 @@
     line-height: 133%;
     text-decoration: line-through;
     color: $color-gray-500;
+
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      font-size: 30px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      width: auto;
+      min-width: 280px;
+      margin-inline: auto;
+    }
+
+    @media screen and (min-width: 1440px) {
+      min-width: 320px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      min-width: 360px;
+    }
   }
 }

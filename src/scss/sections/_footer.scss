@@ -5,6 +5,22 @@
     display: flex;
     justify-content: center;
     padding-block: 8px;
+
+    @media screen and (min-width: $bp-768) {
+      padding-block: 12px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      padding-block: 16px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      padding-block: 20px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      padding-block: 24px;
+    }
   }
 
   &__list {
@@ -15,6 +31,26 @@
     padding: 8px;
     border-radius: 999px;
     background-color: $color-gray-200;
+
+    @media screen and (min-width: $bp-768) {
+      gap: 20px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      gap: 24px;
+      padding: 12px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      gap: 28px;
+      padding: 14px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      gap: 32px;
+      padding: 16px;
+    }
   }
 
   &__link {
@@ -25,6 +61,26 @@
     height: 40px;
     border-radius: 50%;
     background-color: $color-white;
+
+    @media screen and (min-width: $bp-768) {
+      width: 44px;
+      height: 44px;
+    }
+
+    @media screen and (min-width: $bp-1024) {
+      width: 48px;
+      height: 48px;
+    }
+
+    @media screen and (min-width: $bp-1440) {
+      width: 52px;
+      height: 52px;
+    }
+
+    @media screen and (min-width: $bp-1920) {
+      width: 56px;
+      height: 56px;
+    }
   }
 
   &__icon {
