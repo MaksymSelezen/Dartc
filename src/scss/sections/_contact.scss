@@ -1,6 +1,9 @@
 @use "../base/variables" as *;
 
 .contact {
+  $color-contact-error: #f04438;
+  $color-contact-success: #12b76a;
+
   &-container {
     padding-block: 24px;
   }
@@ -15,6 +18,36 @@
 
   &__field {
     margin-bottom: 16px;
+
+    &.is-invalid {
+      .contact__input,
+      .contact__textarea {
+        border-color: $color-contact-error;
+      }
+
+      .contact__hint {
+        color: $color-contact-error;
+      }
+
+      .contact__label-required {
+        color: $color-contact-error;
+      }
+    }
+
+    &.is-valid {
+      .contact__input,
+      .contact__textarea {
+        border-color: $color-contact-success;
+      }
+
+      .contact__hint {
+        color: $color-contact-success;
+      }
+
+      .contact__label-required {
+        color: $color-contact-success;
+      }
+    }
   }
 
   &__label {
@@ -47,9 +80,27 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 160%;
+    color: $color-gray-900;
+    transition:
+      border-color $transition-main,
+      box-shadow $transition-main,
+      background-color $transition-main;
 
     &::placeholder {
       color: $color-gray-400;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-brand-300;
+      box-shadow: 0 0 0 4px $color-brand-100;
+    }
+
+    &:disabled {
+      border-color: $color-gray-300;
+      background-color: $color-gray-100;
+      color: $color-gray-400;
+      cursor: not-allowed;
     }
   }
 
@@ -81,10 +132,43 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 160%;
+    color: $color-gray-900;
+    transition:
+      border-color $transition-main,
+      box-shadow $transition-main,
+      background-color $transition-main;
 
     &::placeholder {
       color: $color-gray-400;
     }
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-brand-300;
+      box-shadow: 0 0 0 4px $color-brand-100;
+    }
+
+    &:disabled {
+      border-color: $color-gray-300;
+      background-color: $color-gray-100;
+      color: $color-gray-400;
+      cursor: not-allowed;
+    }
+  }
+
+  &__hint {
+    min-height: 22px;
+    margin-top: 4px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $color-gray-500;
+    transition: color $transition-main;
+  }
+
+  &__validation-label {
+    display: none;
   }
 
   &__button {

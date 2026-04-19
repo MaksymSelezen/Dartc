@@ -439,7 +439,7 @@
           <div class="contact__inner">
             <h2 class="contact__title">Get in Touch</h2>
 
-            <form class="contact__form">
+            <form class="contact__form" novalidate>
               <div class="contact__field">
                 <label class="contact__label" for="contact-name">
                   Name <span class="contact__label-required">*</span>
@@ -451,7 +451,7 @@
                     type="text"
                     id="contact-name"
                     name="name"
-                    placeholder="Email"
+                    placeholder="Name"
                     required
                   />
 
@@ -461,6 +461,10 @@
                     ></use>
                   </svg>
                 </div>
+
+                <p class="contact__hint" id="contact-name-hint">
+                  This is a hint text to help user.
+                </p>
               </div>
 
               <div class="contact__field">
@@ -484,6 +488,10 @@
                     ></use>
                   </svg>
                 </div>
+
+                <p class="contact__hint" id="contact-email-hint">
+                  This is a hint text to help user.
+                </p>
               </div>
 
               <div class="contact__field contact__field_message">
@@ -498,6 +506,10 @@
                   placeholder="Message"
                   required
                 ></textarea>
+
+                <p class="contact__hint" id="contact-message-hint">
+                  This is a hint text to help user.
+                </p>
               </div>
 
               <button
