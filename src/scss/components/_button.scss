@@ -10,11 +10,35 @@
   line-height: 150%;
   text-align: center;
   color: $color-white;
-}
 
-.ui-button_full {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:disabled {
+    background-color: $color-brand-200;
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow:
+        0 0 0 4px $color-brand-300,
+        0 1px 2px 0 rgba(10, 13, 18, 0.05);
+    }
+  }
+
+  &:active {
+    background-color: $color-brand-200;
+  }
+
+  &_full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
