@@ -4,19 +4,19 @@
   &-container {
     padding-block: 16px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding-block: 20px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding-block: 24px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       padding-block: 28px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       padding-block: 32px;
     }
   }
@@ -32,20 +32,20 @@
     border-radius: 999px;
     background-color: $color-gray-200;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding: 12px 20px 12px 28px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding: 14px 24px 14px 32px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       padding: 16px 32px;
       gap: 24px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       padding: 18px 40px;
       gap: 32px;
     }
@@ -60,22 +60,22 @@
     width: 95px;
     height: 15px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       width: 108px;
       height: 17px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       width: 116px;
       height: 18px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       width: 124px;
       height: 20px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       width: 132px;
       height: 21px;
     }
@@ -84,7 +84,7 @@
   &__nav {
     display: none;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       display: block;
       margin-left: auto;
       min-width: 0;
@@ -92,7 +92,7 @@
   }
 
   &__list {
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -100,19 +100,19 @@
       row-gap: 8px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       column-gap: 36px;
     }
   }
 
   &__link {
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       display: block;
       padding-block: 6px;
       font-size: 18px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       font-size: 22px;
     }
   }
@@ -131,17 +131,17 @@
     background-color: $color-white;
     cursor: pointer;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       width: 44px;
       height: 44px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       width: 48px;
       height: 48px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       display: none;
     }
   }
@@ -152,12 +152,12 @@
     height: 9px;
     stroke: $color-black;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       width: 20px;
       height: 10px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       width: 22px;
       height: 11px;
     }

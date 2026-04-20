@@ -6,19 +6,19 @@
   &-container {
     padding-block: 24px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding-block: 32px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       padding-block: 40px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       padding-block: 56px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       padding-block: 64px;
     }
   }
@@ -31,24 +31,24 @@
     background-color: $color-white;
     box-shadow: 0 8px 24px 0 rgba(149, 157, 165, 0.2);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       padding: 20px;
       border-radius: 20px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       max-width: 760px;
       margin-inline: auto;
       padding: 24px;
       border-radius: 24px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       max-width: 860px;
       padding: 32px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       max-width: 960px;
       padding: 40px;
     }
@@ -58,19 +58,19 @@
     position: relative;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       margin-bottom: 24px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       margin-bottom: 28px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       margin-bottom: 36px;
     }
   }
@@ -78,11 +78,11 @@
   &__image {
     border-radius: 12px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       border-radius: 16px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       border-radius: 20px;
     }
   }
@@ -99,19 +99,19 @@
     border-radius: 9999px;
     background-color: $color-white;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       top: 12px;
       right: 12px;
       width: 52px;
       height: 52px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       width: 56px;
       height: 56px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       width: 60px;
       height: 60px;
     }
@@ -121,12 +121,12 @@
     fill: transparent;
     stroke: $color-black;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       width: 28px;
       height: 28px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       width: 30px;
       height: 30px;
     }
@@ -137,7 +137,7 @@
     flex-direction: column;
     padding-inline: 4px;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       align-items: center;
       padding-inline: 0;
       text-align: center;
@@ -160,26 +160,26 @@
     color: $color-brand-600;
     background-color: $color-brand-100;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       margin-bottom: 10px;
       padding: 6px 14px;
       font-size: 13px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       align-self: center;
       margin-bottom: 12px;
       padding: 8px 16px;
       font-size: 14px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       margin-bottom: 14px;
       padding: 9px 18px;
       font-size: 15px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       font-size: 16px;
     }
   }
@@ -192,24 +192,24 @@
     letter-spacing: -0.03em;
     color: $color-black;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       font-size: 28px;
       margin-bottom: 10px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       max-width: 640px;
       font-size: 34px;
       margin-bottom: 12px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       max-width: 720px;
       font-size: 40px;
       margin-bottom: 16px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       max-width: 780px;
       font-size: 44px;
     }
@@ -222,22 +222,22 @@
     line-height: 150%;
     color: $color-gray-500;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       font-size: 18px;
       margin-bottom: 14px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       font-size: 20px;
       margin-bottom: 16px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       font-size: 22px;
       margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       font-size: 24px;
     }
   }
@@ -248,18 +248,18 @@
     gap: 8px;
     margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       gap: 10px;
       margin-bottom: 24px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       justify-content: center;
       gap: 12px;
       margin-bottom: 28px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       gap: 14px;
       margin-bottom: 32px;
     }
@@ -271,19 +271,19 @@
     line-height: 133%;
     color: $color-black;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       font-size: 28px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       font-size: 34px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       font-size: 40px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       font-size: 44px;
     }
   }
@@ -295,19 +295,19 @@
     text-decoration: line-through;
     color: $color-gray-500;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $bp-768) {
       font-size: 20px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       font-size: 24px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       font-size: 28px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       font-size: 30px;
     }
   }
@@ -315,17 +315,17 @@
   &__button {
     width: 100%;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: $bp-1024) {
       width: auto;
       min-width: 280px;
       margin-inline: auto;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $bp-1440) {
       min-width: 320px;
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: $bp-1920) {
       min-width: 360px;
     }
   }
